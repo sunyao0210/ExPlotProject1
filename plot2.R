@@ -1,5 +1,6 @@
 library(sqldf)
 mySql <- "SELECT * from file WHERE Date = '1/2/2007' OR Date = '2/2/2007'"
+library(tcltk)
 myData <- read.csv2.sql("household_power_consumption.txt",mySql)
 DateTime<-paste(myData$Date,myData$Time)
 SDateTime<-strptime(DateTime,"%d/%m/%Y %H:%M:%S")
